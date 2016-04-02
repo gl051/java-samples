@@ -19,7 +19,7 @@ public class JavaSamples {
     // Get the Sample to execute 
     private static ISample getSample(){
     	// Manually choose what you want to run
-    	String choice = "OOP";
+    	String choice = "DATEFORMAT";
     	
     	switch (choice)
     	{
@@ -27,10 +27,11 @@ public class JavaSamples {
     			return new com.gl051.oop.Sample();
     		case "STRING":
     			return new com.gl051.string.Sample();
+    		case "DATEFORMAT":
+    			return new com.gl051.dateformat.Sample();
     		default:
     			return null;
-    	}
-        
+    	}        
     }
 
 }
