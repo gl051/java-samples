@@ -19,6 +19,7 @@ public class JavaSamples {
     // Get the Sample to execute 
     private static ISample getSample(){
     	// Manually choose what you want to run
+    	String choice = "JDBC";
     	
     	switch (choice)
     	{
@@ -32,6 +33,8 @@ public class JavaSamples {
     			return new com.gl051.enumerate.Sample();
     		case "GENERIC":
     			return new com.gl051.generic.Sample();
+    		case "JDBC":
+    			return new com.gl051.jdbc.Sample();
     		default:
     			return null;
     	}        
