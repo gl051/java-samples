@@ -15,19 +15,19 @@ public class Sample implements ISample {
     @Override
     public void run() {
         try {
-            // Example 1: of polymorphism using interface
-            Circle circle = new Circle();
-            Square square = new Square();
-            DrawShape(circle);
-            DrawShape(square);
+            // Example 1: polymorphism using interface
+        	// Circle implements the interface (contract)
+        	// Square implements the interface (contract)
+            DrawShape(new Circle());
+            DrawShape(new Square());
 
-            // Example 2: of polymorphis using abstrac class
-            Student student = new Student("Allison", "Smith");
-            Teacher teacher = new Teacher("Mark", "Jefferson");
-            PrintJob(student);
-            PrintJob(teacher);
+            // Example 2: polymorphism using abstract class
+            // Student IS a Person (inheritance)
+            // Teacher IS a Persone (inheritance)
+            PrintJob(new Student("Allison", "Smith"));
+            PrintJob(new Teacher("Mark", "Jefferson"));
 
-            // Example 3: the List interface provided by Java util package
+            // Example 3: polymorphism using built-in data types
             ArrayList<String> arrlist = new ArrayList<>();
             LinkedList<String> lnklist = new LinkedList<>();
             PopulateList(arrlist);
@@ -40,15 +40,18 @@ public class Sample implements ISample {
         }
     }
     
-    // Programming against an Interface, argument is Shape
+    // Programming against an Interface
+    // Each class that implements the interface will run its own
+    // implementation at run time
     private static void DrawShape(IShape shape) throws Exception{
-        shape.Draw();
+    	shape.Draw();
         Thread.sleep(2000);
     }
 
-    // Programming against an abstract class, argument is Person
-    private static void PrintJob(Person p){
-        System.out.println("Person name: " + p.getFullName());
+    // Programming against an abstract class
+    // Encapsulation expressed by the getter methods
+    private static void PrintJob(Person p){        
+    	System.out.println("Person name: " + p.getFullName());
         System.out.println("Job: " + p.getOccupation());
     }
 
