@@ -19,7 +19,7 @@ public class JavaSamples {
     // Get the Sample to execute 
     private static ISample getSample(){
     	// Manually choose what you want to run
-    	String choice = "JDBC";
+    	String choice = "CONTROLFLOW";
     	
     	switch (choice)
     	{
@@ -35,6 +35,8 @@ public class JavaSamples {
     			return new com.gl051.generic.Sample();
     		case "JDBC":
     			return new com.gl051.jdbc.Sample();
+    		case "CONTROLFLOW":
+    			return new com.gl051.controlflow.Sample();
     		default:
     			return null;
     	}        
