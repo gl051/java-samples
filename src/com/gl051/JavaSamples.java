@@ -19,7 +19,7 @@ public class JavaSamples {
     // Get the Sample to execute 
     private static ISample getSample(){
     	// Manually choose what you want to run
-    	String choice = "DATEFORMAT";
+    	String choice = "ENUMERATE";
     	
     	switch (choice)
     	{
@@ -29,6 +29,8 @@ public class JavaSamples {
     			return new com.gl051.string.Sample();
     		case "DATEFORMAT":
     			return new com.gl051.dateformat.Sample();
+    		case "ENUMERATE":
+    			return new com.gl051.enumerate.Sample();
     		default:
     			return null;
     	}        
