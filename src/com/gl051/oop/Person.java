@@ -4,9 +4,19 @@ import java.time.LocalTime;
 
 public abstract class Person {
     
+    // Access to class members: PRIVATE, (no modifier), PROTECTED, PUBLIC
+    
+    // Private members are only accessible inside this class
     private String _firstName;
     private String _lastName;
     
+    // no modifier gives access at package leverl 
+    String dummyStringVal = "dummy";
+    
+    // Protected member are accesible inside the class and the package
+    protected int dummyIntVal = 100;
+    
+    // Public members are accessible everywhere
     public Person(String firstName, String lastName) {
         _firstName = firstName;
         _lastName = lastName;
