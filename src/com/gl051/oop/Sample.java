@@ -34,6 +34,18 @@ public class Sample implements ISample {
             PopulateList(lnklist);
             PrintList(arrlist);
             PrintList(lnklist);
+            
+            // Example 4: method overloading and overriding
+            List<Person> people = new LinkedList<Person>();
+            people.add(new Student("Sara","Hamilton"));
+            people.add(new Teacher("Jennifer","Koltz"));
+            for(Person p: people){
+            	// Overriding in action for Student
+            	p.printHello();
+            }
+            // Overloading in action
+            Person p = people.get(0);
+            p.printHello(5);
 
         } catch (Exception e) {
             e.printStackTrace();
