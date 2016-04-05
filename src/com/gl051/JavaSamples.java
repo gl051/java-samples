@@ -3,7 +3,7 @@ package com.gl051;
 public class JavaSamples {
 
     public static void main(String[] args) {
-        System.out.println("*** Tour De Java ***");
+        System.out.println("*** JAVA samples ***");
         ISample s = getSample();
         if (s != null)
         {
